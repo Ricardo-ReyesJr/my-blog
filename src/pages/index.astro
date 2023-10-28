@@ -1,5 +1,9 @@
 ---
-const pageTitle = "Home";
+import '../styles/global.css';
+
+const pageTitle = "Behind The Coder";
+const pageHead = "Behind The Coder | Home"
+const subTitle = "This is the Code Craft Blog"
 ---
 
 <html lang="en">
@@ -8,13 +12,13 @@ const pageTitle = "Home";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{pageHead}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
 		<a href="/about">About</a>
 		<a href="/blog">Blog</a>
 		<h1>{pageTitle}</h1>
-		<h1>My Astro Site</h1>
+		<h2>{subTitle}</h2>
 	</body>
 </html>

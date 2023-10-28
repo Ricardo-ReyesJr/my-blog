@@ -1,19 +1,22 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About Me";
+const pageHead = "Behind The Coder | About Me"
 
 const identity = {
     firstName: "Ricardo",
     lastName: "Reyes",
     country: "USA",
-    occupation: "Software Engineer",
+    occupation: "Freeelance Software Engineer",
     hobbies: ["programming", "Collectables", "Gaming"],
 };
 
-const skills = ["HTML", "CSS", "React", "Astro"];
+const skills = ["HTML", "CSS", "React", "Astro", "MySQL", "Bootstrap", "Tailwind"];
 
-const happy = true;
-const finished = false;
-const goal = 3;
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html>
@@ -22,12 +25,14 @@ const goal = 3;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{pageHead}</title>
     </head>
     <body>
+        <!--Nav -->
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
+
         <h1>{pageTitle}</h1>
         <p>Here are a few facts about me:</p>
         <ul>
@@ -39,14 +44,8 @@ const goal = 3;
         </ul>
         <p>My skills are:</p>
         <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
-        {happy && <p>I am happy to be learining Astro!</p>}
 
-        {finished && <p>I finished this tutorial!</p>}
-
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-        
     </body>
 </html>
