@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting.jsx';
 
 const pageTitle = "Behind The Coder";
 const pageHead = "Behind The Coder | Home";
@@ -8,4 +9,5 @@ const pageHead = "Behind The Coder | Home";
 
 <BaseLayout pageTitle={pageTitle} pageHead={pageHead}>
 	<h2>My Awesome Blog Sub</h2>
+	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey There", "Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
